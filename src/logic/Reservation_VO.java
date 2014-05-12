@@ -10,6 +10,7 @@ public class Reservation_VO {
 	private Date _res_time;
 	private Date _res_canceltime;
 	private int _res_current_applicant;
+	private int _res_max_applicant;
 	private int _res_flag;
 	
 	
@@ -50,6 +51,13 @@ public class Reservation_VO {
 	}
 	public void set_res_current_applicant(int _res_current_applicant) {
 		this._res_current_applicant = _res_current_applicant;
+	}
+	
+	public int get_res_max_applicant() {
+		return _res_max_applicant;
+	}
+	public void set_res_max_applicant(int _res_max_applicant) {
+		this._res_max_applicant = _res_max_applicant;
 	}
 	public int get_res_flag() {
 		return _res_flag;
