@@ -5,7 +5,7 @@ import java.util.Date;
 
 
 public class Item_VO {
-	private String _bean_name;
+	private String _item_name;
 	private String _origin;
 	private String _grade;
 	private String _processing;
@@ -19,10 +19,10 @@ public class Item_VO {
 	private int _def_refund;
 	
 	public String get_bean_name() {
-		return _bean_name;
+		return _item_name;
 	}
 	public void set_bean_name(String _bean_name) {
-		this._bean_name = _bean_name;
+		this._item_name = _bean_name;
 	}
 	public String get_origin() {
 		return _origin;
