@@ -12,7 +12,7 @@ public class Reservation_VO {
 	private int _res_current_applicant;
 	private int _res_max_applicant;
 	private int _res_flag;
-	
+	private String _res_index_detail;
 	
 	
 	
@@ -65,6 +65,14 @@ public class Reservation_VO {
 	public void set_res_flag(int _res_flag) {
 		this._res_flag = _res_flag;
 	}
+	public String get_res_index_detail() {
+		return _res_index_detail;
+	}
+	public void set_res_index_detail(String _res_index_detail) {
+		this._res_index_detail = _res_index_detail;
+	}
+	
+	
 	
 
 	
