@@ -6,87 +6,110 @@ public class Member_VO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String _user_email;
-	private String _user_passwd;
-	private String _alias;
-	private String _phone;
-	private String _postcode;
-	private String _address;
-	private int _user_level;
-	private int _point;
-	private int _num_of_article;
-	private int _num_of_reply;
-	private int _num_of_practice;
+	private String userEmail;
+	private String userPasswd;
+	private String userAlias;
+	private String userPhone;
+	private String userPostcode;
+	private String userAddress;
+	private int userLevel;
+	private int userPoint;
+	private int userNumOfArticle;
+	private int userNumOfReply;
+	private int userNumOfPractice;
 	
 	public Member_VO() {
 		super();
 	}
-	public String get_user_email() {
-		return _user_email;
+
+	public String getUserEmail() {
+		return userEmail;
 	}
-	public void set_user_email(String _user_email) {
-		this._user_email = _user_email;
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
-	public String get_user_passwd() {
-		return _user_passwd;
+
+	public String getUserPasswd() {
+		return userPasswd;
 	}
-	public void set_user_passwd(String _user_passwd) {
-		this._user_passwd = _user_passwd;
+
+	public void setUserPasswd(String userPasswd) {
+		this.userPasswd = userPasswd;
 	}
-	public String get_alias() {
-		return _alias;
+
+	public String getUserAlias() {
+		return userAlias;
 	}
-	public void set_alias(String _alias) {
-		this._alias = _alias;
+
+	public void setUserAlias(String userAlias) {
+		this.userAlias = userAlias;
 	}
-	public String get_phone() {
-		return _phone;
+
+	public String getUserPhone() {
+		return userPhone;
 	}
-	public void set_phone(String _phone) {
-		this._phone = _phone;
+
+	public void setUserPhone(String userPhone) {
+		this.userPhone = userPhone;
 	}
-	public String get_postcode() {
-		return _postcode;
+
+	public String getUserPostcode() {
+		return userPostcode;
 	}
-	public void set_postcode(String _postcode) {
-		this._postcode = _postcode;
+
+	public void setUserPostcode(String userPostcode) {
+		this.userPostcode = userPostcode;
 	}
-	public String get_address() {
-		return _address;
+
+	public String getUserAddress() {
+		return userAddress;
 	}
-	public void set_address(String _address) {
-		this._address = _address;
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
 	}
-	public int get_user_level() {
-		return _user_level;
+
+	public int getUserLevel() {
+		return userLevel;
 	}
-	public void set_user_level(int _user_level) {
-		this._user_level = _user_level;
+
+	public void setUserLevel(int userLevel) {
+		this.userLevel = userLevel;
 	}
-	public int get_point() {
-		return _point;
+
+	public int getUserPoint() {
+		return userPoint;
 	}
-	public void set_point(int _point) {
-		this._point = _point;
+
+	public void setUserPoint(int userPoint) {
+		this.userPoint = userPoint;
 	}
-	public int get_num_of_article() {
-		return _num_of_article;
+
+	public int getUserNumOfArticle() {
+		return userNumOfArticle;
 	}
-	public void set_num_of_article(int _num_of_article) {
-		this._num_of_article = _num_of_article;
+
+	public void setUserNumOfArticle(int userNumOfArticle) {
+		this.userNumOfArticle = userNumOfArticle;
 	}
-	public int get_num_of_reply() {
-		return _num_of_reply;
+
+	public int getUserNumOfReply() {
+		return userNumOfReply;
 	}
-	public void set_num_of_reply(int _num_of_reply) {
-		this._num_of_reply = _num_of_reply;
+
+	public void setUserNumOfReply(int userNumOfReply) {
+		this.userNumOfReply = userNumOfReply;
 	}
-	public int get_num_of_practice() {
-		return _num_of_practice;
+
+	public int getUserNumOfPractice() {
+		return userNumOfPractice;
 	}
-	public void set_num_of_practice(int _num_of_practice) {
-		this._num_of_practice = _num_of_practice;
+
+	public void setUserNumOfPractice(int userNumOfPractice) {
+		this.userNumOfPractice = userNumOfPractice;
 	}
 	
-
+	
+	
 }

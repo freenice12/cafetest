@@ -20,7 +20,7 @@ public class Member_DAO_Impl implements Member_DAO {
 			+ " from member where user_email=? AND user_passwd=?";
 	
 	private static final String INSERT = "INSERT INTO member (user_email, user_passwd, alias, phone_num, postcode, address)"
-			+ " VALUES(:_user_email, :_user_passwd, :_alias, :_phone_num, :_postcode, :_address)";
+			+ " VALUES(:userEmail, :userPasswd, :userAlias, :userPhone, :userPostcode, :userAddress)";
 	
 	private SimpleJdbcTemplate template;
 	
@@ -31,10 +31,10 @@ public class Member_DAO_Impl implements Member_DAO {
 			
 
 	@Override
-	public Member_VO findByUserEmailAndPasswd(String _user_email,
-			String _user_passwd) {
+	public Member_VO findByUserEmailAndUserPasswd(String userEmail,
+			String userPasswd) {
 		RowMapper<Member_VO> mapper = new BeanPropertyRowMapper<Member_VO>(Member_VO.class);
-		return this.template.queryForObject(SELECT_BY_USEREMAIL_PASSWD, mapper, _user_email, _user_passwd);
+		return this.template.queryForObject(SELECT_BY_USEREMAIL_PASSWD, mapper, userEmail, userPasswd);
 	}
 
 
