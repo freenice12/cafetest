@@ -3,61 +3,62 @@ package logic;
 import java.util.Date;
 
 public class Board_reviews_VO {
-	private int bd_no_rev;
-	private Member_VO user_email;
-	private String title_rev;
-	private String content_rev;
-	private Date date_rev;
-	private int count_rev;
-	private int recommend_rev;
-	private String user_ip;
-	public int getBd_no_rev() {
-		return bd_no_rev;
+	private int bdNoRev;
+	private Member_VO userEmail;
+	private String titleRev;
+	private String contentRev;
+	private Date dateRev;
+	private int countRev;
+	private int recommendRev;
+	private String userIp;
+	public int getBdNoRev() {
+		return bdNoRev;
 	}
-	public void setBd_no_rev(int bd_no_rev) {
-		this.bd_no_rev = bd_no_rev;
+	public void setBdNoRev(int bdNoRev) {
+		this.bdNoRev = bdNoRev;
 	}
-	public Member_VO getUser_email() {
-		return user_email;
+	public Member_VO getUserEmail() {
+		return userEmail;
 	}
-	public void setUser_email(Member_VO user_email) {
-		this.user_email = user_email;
+	public void setUserEmail(Member_VO userEmail) {
+		this.userEmail = userEmail;
 	}
-	public String getTitle_rev() {
-		return title_rev;
+	public String getTitleRev() {
+		return titleRev;
 	}
-	public void setTitle_rev(String title_rev) {
-		this.title_rev = title_rev;
+	public void setTitleRev(String titleRev) {
+		this.titleRev = titleRev;
 	}
-	public String getContent_rev() {
-		return content_rev;
+	public String getContentRev() {
+		return contentRev;
 	}
-	public void setContent_rev(String content_rev) {
-		this.content_rev = content_rev;
+	public void setContentRev(String contentRev) {
+		this.contentRev = contentRev;
 	}
-	public Date getDate_rev() {
-		return date_rev;
+	public Date getDateRev() {
+		return dateRev;
 	}
-	public void setDate_rev(Date date_rev) {
-		this.date_rev = date_rev;
+	public void setDateRev(Date dateRev) {
+		this.dateRev = dateRev;
 	}
-	public int getCount_rev() {
-		return count_rev;
+	public int getCountRev() {
+		return countRev;
 	}
-	public void setCount_rev(int count_rev) {
-		this.count_rev = count_rev;
+	public void setCountRev(int countRev) {
+		this.countRev = countRev;
 	}
-	public int getRecommend_rev() {
-		return recommend_rev;
+	public int getRecommendRev() {
+		return recommendRev;
 	}
-	public void setRecommend_rev(int recommend_rev) {
-		this.recommend_rev = recommend_rev;
+	public void setRecommendRev(int recommendRev) {
+		this.recommendRev = recommendRev;
 	}
-	public String getUser_ip() {
-		return user_ip;
+	public String getUserIp() {
+		return userIp;
 	}
-	public void setUser_ip(String user_ip) {
-		this.user_ip = user_ip;
+	public void setUserIp(String userIp) {
+		this.userIp = userIp;
 	}
 	
+		
 }

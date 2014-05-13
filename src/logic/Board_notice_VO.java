@@ -3,41 +3,40 @@ package logic;
 import java.util.Date;
 
 public class Board_notice_VO {
-	private int bd_no_ntc;
-	private String title_ntc;
-	private String content_ntc;
-	private int count_ntc;
-	private Date date_ntc;
-	public int getBd_no_ntc() {
-		return bd_no_ntc;
+	private int bdNoNtc;
+	private String titleNtc;
+	private String contentNtc;
+	private int countNtc;
+	private Date dateNtc;
+	public int getBdNoNtc() {
+		return bdNoNtc;
 	}
-	public void setBd_no_ntc(int bd_no_ntc) {
-		this.bd_no_ntc = bd_no_ntc;
+	public void setBdNoNtc(int bdNoNtc) {
+		this.bdNoNtc = bdNoNtc;
 	}
-	public String getTitle_ntc() {
-		return title_ntc;
+	public String getTitleNtc() {
+		return titleNtc;
 	}
-	public void setTitle_ntc(String title_ntc) {
-		this.title_ntc = title_ntc;
+	public void setTitleNtc(String titleNtc) {
+		this.titleNtc = titleNtc;
 	}
-	public String getContent_ntc() {
-		return content_ntc;
+	public String getContentNtc() {
+		return contentNtc;
 	}
-	public void setContent_ntc(String content_ntc) {
-		this.content_ntc = content_ntc;
+	public void setContentNtc(String contentNtc) {
+		this.contentNtc = contentNtc;
 	}
-	public int getCount_ntc() {
-		return count_ntc;
+	public int getCountNtc() {
+		return countNtc;
 	}
-	public void setCount_ntc(int count_ntc) {
-		this.count_ntc = count_ntc;
+	public void setCountNtc(int countNtc) {
+		this.countNtc = countNtc;
 	}
-	public Date getDate_ntc() {
-		return date_ntc;
+	public Date getDateNtc() {
+		return dateNtc;
 	}
-	public void setDate_ntc(Date date_ntc) {
-		this.date_ntc = date_ntc;
+	public void setDateNtc(Date dateNtc) {
+		this.dateNtc = dateNtc;
 	}
-	
-	
+		
 }
