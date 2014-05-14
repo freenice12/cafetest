@@ -11,7 +11,8 @@ public class Member_VO implements Serializable {
 	private String userAlias;
 	private String userPhone;
 	private String userPostcode;
-	private String userAddress;
+	private String userAddress1;
+	private String userAddress2;
 	private int userLevel;
 	private int userPoint;
 	private int userNumOfArticle;
@@ -42,6 +43,22 @@ public class Member_VO implements Serializable {
 		return userAlias;
 	}
 
+	public String getUserAddress1() {
+		return userAddress1;
+	}
+
+	public void setUserAddress1(String userAddress1) {
+		this.userAddress1 = userAddress1;
+	}
+
+	public String getUserAddress2() {
+		return userAddress2;
+	}
+
+	public void setUserAddress2(String userAddress2) {
+		this.userAddress2 = userAddress2;
+	}
+
 	public void setUserAlias(String userAlias) {
 		this.userAlias = userAlias;
 	}
@@ -60,14 +77,6 @@ public class Member_VO implements Serializable {
 
 	public void setUserPostcode(String userPostcode) {
 		this.userPostcode = userPostcode;
-	}
-
-	public String getUserAddress() {
-		return userAddress;
-	}
-
-	public void setUserAddress(String userAddress) {
-		this.userAddress = userAddress;
 	}
 
 	public int getUserLevel() {
@@ -109,7 +118,6 @@ public class Member_VO implements Serializable {
 	public void setUserNumOfPractice(int userNumOfPractice) {
 		this.userNumOfPractice = userNumOfPractice;
 	}
-	
 	
 	
 }
