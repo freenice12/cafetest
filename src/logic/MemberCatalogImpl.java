@@ -16,10 +16,10 @@ public class MemberCatalogImpl implements MemberCatalog {
 	}
 
 	@Override
-	public Member_VO getUserByUserEmailAndUserPass(String _user_email,
-			String _user_passwd) {
+	public Member_VO getMemberByUserEmailAndUserPasswd(String userEmail,
+			String userPasswd) {
 		// TODO Auto-generated method stub
-		return this.memberDao.findByUserEmailAndPasswd(_user_email, _user_passwd);
+		return this.memberDao.findByUserEmailAndUserPasswd(userEmail, userPasswd);
 	}
 
 	@Override
