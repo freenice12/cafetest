@@ -32,12 +32,11 @@ public class MemberEntryValidator implements Validator {
 		if(!StringUtils.hasText(member.getUserPostcode())){
 			errors.rejectValue("userPostcode", "error.required");
 		}
-		if(!StringUtils.hasText(member.getUserAddress())){
-			errors.rejectValue("userAddress", "error.required");
+		if(!StringUtils.hasText(member.getUserAddress2())){
+			errors.rejectValue("userAddress2", "error.required");
 		}
 		if(errors.hasErrors()){
 			errors.reject("error.input.member");
 		}
 	}
-
 }

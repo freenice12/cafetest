@@ -119,5 +119,4 @@ public class Member_VO implements Serializable {
 		this.userNumOfPractice = userNumOfPractice;
 	}
 	
-	
 }
