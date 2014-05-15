@@ -6,6 +6,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+
 public class MemberEntryValidator implements Validator {
 
 	@Override

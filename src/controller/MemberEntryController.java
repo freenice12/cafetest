@@ -1,9 +1,7 @@
 package controller;
 
-import javax.servlet.http.HttpSession;
-
-import logic.MemberCatalog;
 import logic.Member_VO;
+import logic.Shop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -24,17 +22,17 @@ import utils.MemberEntryValidator;
 public class MemberEntryController {
 	
 	@Autowired
-	private MemberCatalog memberService;
+	private Shop shopService;
 	
-	@Autowired
+	/*@Autowired
 	private MemberEntryValidator memberEntryValidator;
-	
+	*/
 	@Autowired
 	private MessageSource messageSource;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String toMemberEntryView(){
-		return "memberEntry/memberEntry";
+		return "memberentry/memberEntry";
 	}
 	
 	@ModelAttribute
@@ -47,9 +45,8 @@ public class MemberEntryController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView onSubmit(Member_VO member, BindingResult bindingResult , HttpSession session) throws Exception{
-		
-		this.memberEntryValidator.validate(member, bindingResult);
+	public ModelAndView onSubmit(Member_VO member, BindingResult bindingResult) throws Exception{
+	
 		
 		ModelAndView modelAndView = new ModelAndView();
 		
@@ -58,12 +55,12 @@ public class MemberEntryController {
 			return modelAndView;
 		}
 			try{
-			this.memberService.entryMember(member);
+			this.shopService.entryMember(member);
 			/*session.setAttribute(WebConstants.USER_KEY, member);
 			if(this.shopService.getCart()==null){
 				session.setAttribute(WebConstants.CART_KEY, this.shopService.getCart());
 			}*/
-			modelAndView.setViewName("memberForm/memberEntrySuccess");
+			modelAndView.setViewName("memberentry/memberEntrySuccess");
 			modelAndView.addObject("member", member);
 			return modelAndView;
 

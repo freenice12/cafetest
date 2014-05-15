@@ -14,7 +14,7 @@
 
 <h2>회원 가입</h2>
 
-<form:form modelAttribute ="member" method="post" action = "../memberEntry/memberEntry.html">
+<form:form modelAttribute ="member" method="post" action = "../memberentry/memberEntry.html">
 <spring:hasBindErrors name="member">
 <font color = "red"><c:forEach items="${errors.globalErrors }" var="error">
 <spring:message code="${error.code }"/>
