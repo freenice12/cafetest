@@ -2,6 +2,7 @@ package controller;
 
 import javax.servlet.http.HttpSession;
 
+import logic.MemberCatalog;
 import logic.Member_VO;
 import logic.Shop;
 
@@ -24,7 +25,7 @@ import utils.WebConstants;
 public class MemberEntryController {
 	
 	@Autowired
-	private Shop shopService;
+	private MemberCatalog memberService;
 	
 	@Autowired
 	private MemberEntryValidator memberEntryValidator;
@@ -53,12 +54,12 @@ public class MemberEntryController {
 			modelAndView.getModel().putAll(bindingResult.getModel());
 			return modelAndView;
 		}
-		try{
-			this.shopService.entryMember(member);
+			try{
+			this.memberService.entryMember(member);
 			session.setAttribute(WebConstants.USER_KEY, member);
-			if(this.shopService.getCart()==null){
+			/*if(this.shopService.getCart()==null){
 				session.setAttribute(WebConstants.CART_KEY, this.shopService.getCart());
-			}
+			}*/
 			modelAndView.setViewName("memberForm/memberEntrySuccess");
 			modelAndView.addObject("member", member);
 			return modelAndView;
