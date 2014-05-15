@@ -23,21 +23,21 @@ import utils.WebConstants;
 
 @Controller
 public class MemberEntryController {
-	
+
 	@Autowired
 	private MemberCatalog memberService;
-	
+
 	@Autowired
 	private MemberEntryValidator memberEntryValidator;
-	
+
 	@Autowired
 	private MessageSource messageSource;
-	
+
 	@RequestMapping(method=RequestMethod.GET)
 	public String toMemberEntryView(){
 		return "memberForm/memberEntry";
 	}
-	
+
 	@ModelAttribute
 	public Member_VO setUpForm(){
 		Member_VO member = new Member_VO();
@@ -46,7 +46,7 @@ public class MemberEntryController {
 		member.setUserAlias(accessor.getMessage("member.userAlias.default"));
 		return member;
 	}
-	
+
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(Member_VO member, BindingResult bindingResult , HttpSession session) throws Exception{
 		ModelAndView modelAndView = new ModelAndView();
