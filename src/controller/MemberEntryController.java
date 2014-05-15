@@ -4,7 +4,6 @@ import javax.servlet.http.HttpSession;
 
 import logic.MemberCatalog;
 import logic.Member_VO;
-import logic.Shop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -18,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import utils.MemberEntryValidator;
-import utils.WebConstants;
+/*import utils.WebConstants;*/
 
 
 @Controller
@@ -49,15 +48,19 @@ public class MemberEntryController {
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(Member_VO member, BindingResult bindingResult , HttpSession session) throws Exception{
+		
+		this.memberEntryValidator.validate(member, bindingResult);
+		
 		ModelAndView modelAndView = new ModelAndView();
+		
 		if(bindingResult.hasErrors()){
 			modelAndView.getModel().putAll(bindingResult.getModel());
 			return modelAndView;
 		}
 			try{
 			this.memberService.entryMember(member);
-			session.setAttribute(WebConstants.USER_KEY, member);
-			/*if(this.shopService.getCart()==null){
+			/*session.setAttribute(WebConstants.USER_KEY, member);
+			if(this.shopService.getCart()==null){
 				session.setAttribute(WebConstants.CART_KEY, this.shopService.getCart());
 			}*/
 			modelAndView.setViewName("memberForm/memberEntrySuccess");
