@@ -34,7 +34,7 @@ public class MemberEntryController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String toMemberEntryView(){
-		return "memberForm/memberEntry";
+		return "memberEntry/memberEntry";
 	}
 	
 	@ModelAttribute
