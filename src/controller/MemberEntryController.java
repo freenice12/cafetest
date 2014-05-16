@@ -46,7 +46,6 @@ public class MemberEntryController {
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(Member_VO member, BindingResult bindingResult) throws Exception{
-	
 		
 		ModelAndView modelAndView = new ModelAndView();
 		

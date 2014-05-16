@@ -40,8 +40,8 @@ class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 exception.LoginRequiredException=dummyLogin
 exception.CartEmptyException=cartEmpty
 org.springframework.dao.DataRetrievalFailureException=dataNotFound
-java.lang.Exception=exception
-</value>
+<!-- java.lang.Exception=exception
+ --></value>
 </property>
 </bean>
 </beans>
