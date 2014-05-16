@@ -1,6 +1,6 @@
 package controller;
 
-import logic.Member_VO;
+import logic.MemberVo;
 import logic.Shop;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,8 +36,8 @@ public class MemberEntryController {
 	}
 	
 	@ModelAttribute
-	public Member_VO setUpForm(){
-		Member_VO member = new Member_VO();
+	public MemberVo setUpForm(){
+		MemberVo member = new MemberVo();
 		MessageSourceAccessor accessor = new MessageSourceAccessor(this.messageSource);
 		member.setUserEmail(accessor.getMessage("member.userEmail.default"));
 		member.setUserAlias(accessor.getMessage("member.userAlias.default"));
@@ -45,7 +45,7 @@ public class MemberEntryController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView onSubmit(Member_VO member, BindingResult bindingResult) throws Exception{
+	public ModelAndView onSubmit(MemberVo member, BindingResult bindingResult) throws Exception{
 		
 		ModelAndView modelAndView = new ModelAndView();
 		

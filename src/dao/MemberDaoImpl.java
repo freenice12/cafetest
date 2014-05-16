@@ -10,10 +10,10 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import logic.Member_VO;
+import logic.MemberVo;
 
 @Repository
-public class Member_DAO_Impl implements Member_DAO {
+public class MemberDaoImpl implements MemberDao {
 	
 	private static final String SELECT_BY_USEREMAIL_PASSWD = "SELECT user_email, user_passwd, alias,"
 			+ " phone_num, postcode, address, user_level, point, num_of_article, num_of_reply, num_of_practice"
@@ -31,17 +31,17 @@ public class Member_DAO_Impl implements Member_DAO {
 			
 
 	@Override
-	public Member_VO findByUserEmailAndUserPasswd(String userEmail,
+	public MemberVo findByUserEmailAndUserPasswd(String userEmail,
 			String userPasswd) {
-		RowMapper<Member_VO> mapper = new BeanPropertyRowMapper<Member_VO>(Member_VO.class);
+		RowMapper<MemberVo> mapper = new BeanPropertyRowMapper<MemberVo>(MemberVo.class);		
 		return this.template.queryForObject(SELECT_BY_USEREMAIL_PASSWD, mapper, userEmail, userPasswd);
 	}
 
 
 	@Override
-	public void create(Member_VO member) {
+	public void create(MemberVo member) {
 		SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(member);
-		this.template.update(Member_DAO_Impl.INSERT, parameterSource);
+		this.template.update(MemberDaoImpl.INSERT, parameterSource);
 	}
 
 }

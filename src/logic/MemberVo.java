@@ -2,7 +2,7 @@ package logic;
 
 import java.io.Serializable;
 
-public class Member_VO implements Serializable {
+public class MemberVo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -19,7 +19,7 @@ public class Member_VO implements Serializable {
 	private int userNumOfReply;
 	private int userNumOfPractice;
 	
-	public Member_VO() {
+	public MemberVo() {
 		super();
 	}
 

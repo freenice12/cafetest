@@ -1,6 +1,6 @@
 package utils;
 
-import logic.Member_VO;
+import logic.MemberVo;
 
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
@@ -12,14 +12,14 @@ public class MemberEntryValidator implements Validator {
 	@Override
 	public boolean supports(Class<?> clazz) {
 		// TODO Auto-generated method stub
-		return Member_VO.class.isAssignableFrom(clazz);
+		return MemberVo.class.isAssignableFrom(clazz);
 	}
 
 	@Override
 	public void validate(Object command, Errors errors) {
 		// TODO Auto-generated method stub
 		
-		Member_VO member = (Member_VO) command;
+		MemberVo member = (MemberVo) command;
 		
 		if(!StringUtils.hasLength(member.getUserEmail())){
 			errors.rejectValue("userEmail", "error.required");
