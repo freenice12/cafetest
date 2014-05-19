@@ -1,8 +1,10 @@
 package logic;
 
-import java.util.List;
+import logic.MemberVo;
 
 public interface Shop {
-	List<Item_VO> getItemList();
 
+
+	MemberVo getMemberByUserEmailAndUserPasswd(String userEmail, String userPasswd);
+	void entryMember(MemberVo member);
 }

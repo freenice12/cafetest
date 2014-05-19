@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Reservation_VO {
 
-	private Member_VO userEmail;
+	private MemberVo userEmail;
 	private Experience_VO expNo;
 	private int resTableNum;
 	private Date resTime;
@@ -22,13 +22,13 @@ public class Reservation_VO {
 
 
 
-	public Member_VO getUserEmail() {
+	public MemberVo getUserEmail() {
 		return userEmail;
 	}
 
 
 
-	public void setUserEmail(Member_VO userEmail) {
+	public void setUserEmail(MemberVo userEmail) {
 		this.userEmail = userEmail;
 	}
 
