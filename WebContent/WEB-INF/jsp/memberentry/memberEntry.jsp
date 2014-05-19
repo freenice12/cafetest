@@ -14,8 +14,8 @@
 
 <h2>회원 가입</h2>
 
-<form:form modelAttribute ="member" method="post" action = "../memberentry/memberEntry.html">
-<spring:hasBindErrors name="member">
+<form:form modelAttribute ="memberVo" method="post" action = "../memberentry/memberEntry.html">
+<spring:hasBindErrors name="memberVo">
 <font color = "red"><c:forEach items="${errors.globalErrors }" var="error">
 <spring:message code="${error.code }"/>
 </c:forEach>
@@ -31,6 +31,11 @@
 <td>비밀번호</td>
 <td> <form:input path="userPasswd" cssClass="userPasswd" maxlength="15"/><font color="red"><form:errors path="userPasswd"/> </font> 
 </td></tr>
+<%-- <tr height="40px">
+<td>비밀번호 확인</td>
+<td> <form:input path="confirmPasswd" cssClass="confirmPasswd" maxlength="15" onkeyup="confirmPasswd()"/> 
+</td></tr>
+ --%>
 <tr height="40px">
 <td>별명</td>
 <td> <form:input path="userAlias" cssClass="userAlias" maxlength="30"/><font color="red"><form:errors path="userAlias"/> </font> 
@@ -46,6 +51,10 @@
 <tr height="40px">
 <td>상세 주소</td>
 <td> <form:input path="userAddress2" cssClass="userAddress2" maxlength="10"/><font color="red"><form:errors path="userAddress2"/> </font> 
+</td></tr>
+<tr height="40px">
+<td>전화번호</td>
+<td> <form:input path="userPhone" cssClass="userPhone" maxlength="30"/><font color="red"><form:errors path="userPhone"/> </font> 
 </td></tr>
 </table>
 <table>

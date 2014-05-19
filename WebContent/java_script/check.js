@@ -1,5 +1,4 @@
 function CheckForm(f) {
-
 	/* �̸� ������ ���Ἲ Ȯ�� */
 	var r1 = /[0123456789]/g;
 	var r2 = /[^a-zA-Z0-9]/g;
@@ -26,6 +25,19 @@ function CheckForm(f) {
 		return false;
 	}
 }
+
+//비밀번호 확인 이벤트
+jQuery('.pwdConfirm').validate({
+	rules : {
+		userPasswd : {
+			minlength : 5
+		},
+		confirmPasswd : {
+			minlength : 5,
+			equalTo : "#userPasswd"
+		}
+	}
+});
 
 /* Address */
 function CheckAddr(a) {

@@ -39,11 +39,11 @@ public class MemberEntryController {
 	public MemberVo setUpForm(){
 		MemberVo member = new MemberVo();
 		MessageSourceAccessor accessor = new MessageSourceAccessor(this.messageSource);
-		member.setUserEmail(accessor.getMessage("member.userEmail.default"));
-		member.setUserAlias(accessor.getMessage("member.userAlias.default"));
+//		member.setUserEmail(accessor.getMessage("member.userEmail.default"));
+//		member.setUserAlias(accessor.getMessage("member.userAlias.default"));
 		return member;
 	}
-	
+
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(MemberVo member, BindingResult bindingResult) throws Exception{
 		
@@ -51,8 +51,10 @@ public class MemberEntryController {
 		
 		if(bindingResult.hasErrors()){
 			modelAndView.getModel().putAll(bindingResult.getModel());
-			return modelAndView;
+			return modelAndView;			
+			
 		}
+		
 			try{
 			this.shopService.entryMember(member);
 			/*session.setAttribute(WebConstants.USER_KEY, member);
@@ -66,7 +68,7 @@ public class MemberEntryController {
 		}
 		catch(DataIntegrityViolationException e){
 			//유저 ID 중복 시, 폼을 송신한 곳으로 이동
-			bindingResult.reject("error.duplicate.member");
+			bindingResult.reject("error.duplicate.memberVo");
 			modelAndView.getModel().putAll(bindingResult.getModel());
 			return modelAndView;
 		}
