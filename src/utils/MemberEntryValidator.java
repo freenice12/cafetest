@@ -37,7 +37,7 @@ public class MemberEntryValidator implements Validator {
 			errors.rejectValue("userAddress2", "error.required");
 		}
 		if(errors.hasErrors()){
-			errors.reject("error.input.member");
+			errors.reject("error.input.memberVo");
 		}
 	}
 }

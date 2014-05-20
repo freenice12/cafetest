@@ -9,7 +9,9 @@ public class MemberVo implements Serializable {
 	private String userEmail;
 	private String userPasswd;
 	private String userAlias;
-	private String userPhone;
+	private String userPhone1;
+	private String userPhone2;
+	private String userPhone3;
 	private String userPostcode;
 	private String userAddress1;
 	private String userAddress2;
@@ -63,12 +65,30 @@ public class MemberVo implements Serializable {
 		this.userAlias = userAlias;
 	}
 
-	public String getUserPhone() {
-		return userPhone;
+	public String getUserPhone1() {
+		return userPhone1;
 	}
 
-	public void setUserPhone(String userPhone) {
-		this.userPhone = userPhone;
+	public void setUserPhone1(String userPhone1) {
+		this.userPhone1 = userPhone1;
+	}
+	
+
+	public String getUserPhone2() {
+		return userPhone2;
+	}
+
+	public void setUserPhone(String userPhone2) {
+		this.userPhone2 = userPhone2;
+	}
+	
+
+	public String getUserPhone3() {
+		return userPhone3;
+	}
+
+	public void setUserPhone3(String userPhone3) {
+		this.userPhone3 = userPhone3;
 	}
 
 	public String getUserPostcode() {
