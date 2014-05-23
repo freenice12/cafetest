@@ -30,6 +30,9 @@
 				<td>${member.userAlias }</td>
 			</tr>
 			<tr height="40px">
+			<td>전화번호</td>
+			<td>${member.userPhone1 }-${member.userPhone2 }-${member.userPhone3 }</td>
+			<tr height="40px">
 				<td>우편번호</td>
 				<td>${member.userPostcode }</td>
 			</tr>

@@ -70,7 +70,59 @@ CREATE TABLE SALE_LINE(
 );
 
 
-select * from member;
 
-select * from POST;
+-- ========= 팀 프로젝트용 테이블 생성 =========
+
+SELECT * FROM postcode;
+
+SELECT *
+FROM postcode
+WHERE eupmyeondong like '소하%';
+
+DROP TABLE postcode;
+CREATE TABLE postcode
+(
+zipcode varchar2(20),
+SiDo varchar2(30),
+SiGunGu varchar2(30),
+eupMyeonDong varchar2(30),
+Ri varchar2(30),
+Beonji varchar2(30),
+Bldg varchar2(100)
+);
+
+
+-- ======== ctl 파일 내용 - text 파일에 작성 후 '.ctl'로 저장 ========== --
+load data
+infile 'c:\postcode\zipcode_20140313.csv'
+into table postcode
+fields terminated by ","
+(zipcode,
+SiDo,
+SiGunGu,
+eupMyeonDong,
+Ri,
+Beonji,
+Bldg);
+
+
+drop table member;
+create table member(
+	user_email varchar2(50) primary key,
+	user_passwd varchar2(30) not null,
+	user_alias varchar2(50) not null,
+	user_phone_num1 varchar2(11) not null,
+	user_phone_num2 varchar2(11) not null,
+	user_phone_num3 varchar2(11) not null,
+	user_postcode varchar2(20) not null,
+	user_address1 varchar2(200) not null,
+	user_address2 varchar2(200) not null,
+	user_user_level number(2) default 0,
+	user_point number(6) default 0,
+	user_num_of_article number(5) default 0,
+	user_num_of_reply number(8) default 0,
+	user_num_of_practice number(4) default 0
+);
+
+select * from member;
 

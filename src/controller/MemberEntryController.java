@@ -3,6 +3,7 @@ package controller;
 import javax.servlet.http.HttpSession;
 
 import logic.MemberVo;
+import logic.PostcodeCatalog;
 import logic.Shop;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class MemberEntryController {
 	@Autowired
 	private Shop shopService;
 	
+	@Autowired
+	private PostcodeCatalog postcodeCatalog;
+	
 	/*@Autowired
 	private MemberEntryValidator memberEntryValidator;
 	*/
@@ -40,7 +44,6 @@ public class MemberEntryController {
 		
 		return new MemberVo();
 	}
-
 
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(MemberVo member, BindingResult bindingResult, HttpSession session) throws Exception{
