@@ -15,12 +15,12 @@ import logic.MemberVo;
 @Repository
 public class Member_DAO_Impl implements Member_DAO {
 	
-	private static final String SELECT_BY_USEREMAIL_PASSWD = "SELECT user_email, user_passwd, alias,"
-			+ " phone_num, postcode, address1, address2, user_level, point, num_of_article, num_of_reply, num_of_practice"
+	private static final String SELECT_BY_USEREMAIL_PASSWD = "SELECT user_email, user_passwd, user_alias,"
+			+ " user_phone1,user_phone2,user_phone3, user_postcode, user_address1, user_address2, user_level, user_point, user_num_of_article, user_num_of_reply, user_num_of_practice"
 			+ " from member where user_email=? AND user_passwd=?";
 	
-	private static final String INSERT = "INSERT INTO member (user_email, user_passwd, alias, phone_num, postcode, address1, address2)"
-			+ " VALUES(:userEmail, :userPasswd, :userAlias, :userPhone, :userPostcode, :userAddress1, :userAddress2)";
+	private static final String INSERT = "INSERT INTO member (user_email, user_passwd, user_alias, user_phone1,user_phone2,user_phone3, user_postcode1,user_postcode2, user_address1, user_address2)"
+			+ " VALUES(:userEmail, :userPasswd, :userAlias, :userPhone1,:userPhone2,:userPhone3, :userPostcode, :userAddress1, :userAddress2)";
 	
 	private SimpleJdbcTemplate template;
 	

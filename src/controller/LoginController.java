@@ -37,12 +37,12 @@ public class LoginController {
 
 	}
 	
-	@RequestMapping
-	public ModelAndView logout(HttpSession session){
-		ModelAndView modelAndView = new ModelAndView();
-		session.invalidate();
-		return modelAndView;
+	@RequestMapping("logout")
+	public String logout(HttpSession session){
+		session.setAttribute("USER_KEY", null);
+		return "redirect:../index/index.html";	//redirect는 경로를 지정해준다는 의미 
 	}
+	
 
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(MemberVo member,
@@ -58,17 +58,18 @@ public class LoginController {
 		}
 
 		try {
-			//유저 정보 검색
+			// ���������˻�
 			MemberVo loginMemberVo = this.shopService
 					.getMemberByUserEmailAndUserPasswd(
 							member.getUserEmail(), member.getUserPasswd());
 			session.setAttribute(WebConstants.USER_KEY, loginMemberVo);
-			//유저 확인시
-			modelAndView.setViewName("login/loginSuccess");
+			//���� Ȯ�� ��
 			modelAndView.addObject("loginMemberVo",loginMemberVo);
+			modelAndView.setViewName("index/index");
+			
 			return modelAndView;
 		} catch (EmptyResultDataAccessException e) {
-			//유저 미 확인시
+			// ���� �� Ȯ�ν�
 			bindingResult.reject("error.login.memberVo");
 			modelAndView.getModel().putAll(bindingResult.getModel());
 			return modelAndView;
@@ -76,3 +77,5 @@ public class LoginController {
 	}
 
 }
+
+

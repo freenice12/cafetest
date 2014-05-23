@@ -5,12 +5,15 @@ import java.io.Serializable;
 public class MemberVo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	
+
 	private String userEmail;
 	private String userPasswd;
 	private String userAlias;
-	private String userPhone;
-	private String userPostcode;
+	private String userPhone1;
+	private String userPhone2;
+	private String userPhone3;
+	private String userPostcode1;
+	private String userPostcode2;
 	private String userAddress1;
 	private String userAddress2;
 	private int userLevel;
@@ -43,6 +46,50 @@ public class MemberVo implements Serializable {
 		return userAlias;
 	}
 
+	public void setUserAlias(String userAlias) {
+		this.userAlias = userAlias;
+	}
+
+	public String getUserPhone1() {
+		return userPhone1;
+	}
+
+	public void setUserPhone1(String userPhone1) {
+		this.userPhone1 = userPhone1;
+	}
+
+	public String getUserPhone2() {
+		return userPhone2;
+	}
+
+	public void setUserPhone2(String userPhone2) {
+		this.userPhone2 = userPhone2;
+	}
+
+	public String getUserPhone3() {
+		return userPhone3;
+	}
+
+	public void setUserPhone3(String userPhone3) {
+		this.userPhone3 = userPhone3;
+	}
+
+	public String getUserPostcode1() {
+		return userPostcode1;
+	}
+
+	public void setUserPostcode1(String userPostcode1) {
+		this.userPostcode1 = userPostcode1;
+	}
+
+	public String getUserPostcode2() {
+		return userPostcode2;
+	}
+
+	public void setUserPostcode2(String userPostcode2) {
+		this.userPostcode2 = userPostcode2;
+	}
+
 	public String getUserAddress1() {
 		return userAddress1;
 	}
@@ -57,26 +104,6 @@ public class MemberVo implements Serializable {
 
 	public void setUserAddress2(String userAddress2) {
 		this.userAddress2 = userAddress2;
-	}
-
-	public void setUserAlias(String userAlias) {
-		this.userAlias = userAlias;
-	}
-
-	public String getUserPhone() {
-		return userPhone;
-	}
-
-	public void setUserPhone(String userPhone) {
-		this.userPhone = userPhone;
-	}
-
-	public String getUserPostcode() {
-		return userPostcode;
-	}
-
-	public void setUserPostcode(String userPostcode) {
-		this.userPostcode = userPostcode;
 	}
 
 	public int getUserLevel() {
@@ -97,7 +124,7 @@ public class MemberVo implements Serializable {
 
 	public int getUserNumOfArticle() {
 		return userNumOfArticle;
-	} 
+	}
 
 	public void setUserNumOfArticle(int userNumOfArticle) {
 		this.userNumOfArticle = userNumOfArticle;
@@ -118,5 +145,6 @@ public class MemberVo implements Serializable {
 	public void setUserNumOfPractice(int userNumOfPractice) {
 		this.userNumOfPractice = userNumOfPractice;
 	}
-	
+
+
 }

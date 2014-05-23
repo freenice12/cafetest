@@ -29,8 +29,14 @@ public class MemberEntryValidator implements Validator {
 		if(!StringUtils.hasLength(member.getUserAlias())){
 			errors.rejectValue("userAlias", "error.required");
 		}
-		if(!StringUtils.hasText(member.getUserPostcode())){
+		if(!StringUtils.hasText(member.getUserPostcode1())){
 			errors.rejectValue("userPostcode", "error.required");
+		}
+		if(!StringUtils.hasText(member.getUserPostcode2())){
+			errors.rejectValue("userPostcode", "error.required");
+		}
+		if(!StringUtils.hasText(member.getUserAddress1())){
+			errors.rejectValue("userAddress2", "error.required");
 		}
 		if(!StringUtils.hasText(member.getUserAddress2())){
 			errors.rejectValue("userAddress2", "error.required");
