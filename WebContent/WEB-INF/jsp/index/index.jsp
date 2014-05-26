@@ -19,7 +19,7 @@
 	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
 
 <!-- 커스텀 css -->
-<link href="css/style.css" rel="stylesheet">
+<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet">
 
 <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
 </head>
@@ -40,7 +40,7 @@
 				</button>
 			</div>
 			<div id="logo">
-				<a href="index.html"><img src="../../../images/cafe_logo.png"
+				<a href="index.html"><img src="<%=request.getContextPath() %>/images/cafe_logo.png"
 					class="logo img-responsive"></a>
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse"
@@ -82,7 +82,7 @@
 				<!-- ========== Wrapper for slides======= -->
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="../../../images/bg/sortingBeans_re.jpg" alt="intro"
+						<img src="<%=request.getContextPath() %>/images/bg/sortingBeans_re.jpg" alt="intro"
 							class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h1>Cafe 4.0</h1>
@@ -93,7 +93,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="../../../images/bg/woodenBike_re.jpg" alt="woodenBike"
+						<img src="<%=request.getContextPath() %>/images/bg/woodenBike_re.jpg" alt="woodenBike"
 							class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h1>나무 자전거</h1>
@@ -104,7 +104,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="../../../images/bg/pickingCoffeCherries_re.jpg"
+						<img src="<%=request.getContextPath() %>/images/bg/pickingCoffeCherries_re.jpg"
 							alt="cherryPicking" class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h2>르완다</h2>
@@ -118,7 +118,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="../../../images/bg/coffeeParchments_re.jpg" alt="parchments"
+						<img src="<%=request.getContextPath() %>/images/bg/coffeeParchments_re.jpg" alt="parchments"
 							class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h2>파치먼트 상태</h2>
