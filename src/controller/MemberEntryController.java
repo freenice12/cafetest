@@ -44,6 +44,12 @@ public class MemberEntryController {
 		
 		return new MemberVo();
 	}
+	
+/*	@RequestMapping(value="postcode/postcode", method=RequestMethod.GET)
+	public void postcodePage(){
+
+	}*/
+
 
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(MemberVo member, BindingResult bindingResult, HttpSession session) throws Exception{

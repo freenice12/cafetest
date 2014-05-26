@@ -60,28 +60,29 @@
 						<form:option value="011" label="011" />
 						<form:option value="016" label="016" />
 						<form:option value="019" lable="019" />
-					</form:select> - <form:input path="userPhone2" cssClass="userPhone" maxlength="5" />
-					- <form:input path="userPhone3" cssClass="userPhone" maxlength="5" /><font
+					</form:select> - <form:input path="userPhone2" cssClass="userPhone" maxlength="5" size="5"/>
+					- <form:input path="userPhone3" cssClass="userPhone" maxlength="5" size="5"/><font
 					color="red"><form:errors path="userPhone3" /> </font></td>
 			</tr>
+
 
 			<tr height="40px">
 				<td>우편번호</td>
 				<td><form:input path="userPostcode" cssClass="userPostcode"
-						maxlength="10" /><a href="../postcode/postcode.html"><input type="button" class="button"
-					value="우편번호 찾기" id="userPostcode"></a><font color="red"><form:errors
+						maxlength="10" size="10"/><input type="button" class="button"
+					value="우편번호 찾기" id="userPostcode" onclick="openwin()"><font color="red"><form:errors
 							path="userPostcode" /> </font></td>
 			</tr>
 			<tr height="40px">
 				<td>기본 주소</td>
 				<td><form:input path="userAddress1" cssClass="userAddress1"
-						maxlength="10" /><font color="red"><form:errors
+						maxlength="20" size="25" /><font color="red"><form:errors
 							path="userAddress1" /> </font></td>
 			</tr>
 			<tr height="40px">
 				<td>상세 주소</td>
 				<td><form:input path="userAddress2" cssClass="userAddress2"
-						maxlength="10" /><font color="red"><form:errors
+						maxlength="20" size="25"  /><font color="red"><form:errors
 							path="userAddress2" /> </font></td>
 			</tr>
 		</table>

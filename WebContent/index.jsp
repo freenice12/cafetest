@@ -40,7 +40,7 @@
 				</button>
 			</div>
 			<div id="logo">
-				<a href="index.html"><img src="../../../images/cafe_logo.png"
+				<a href="index.html"><img src="images/cafe_logo.png"
 					class="logo img-responsive"></a>
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse"
@@ -67,8 +67,8 @@
 					<button type="submit" class="btn btn-warning">Submit</button>
 
 				</form>
-				<span id="loginButtons"><a href="login/login.html"
-					class="btn btn-primary login-button">로그인</a><a href="memberentry/memberEntry.html"
+				<span id="loginButtons"><a href="login.html"
+					class="btn btn-primary login-button">로그인</a><a href="member.html"
 					class="btn btn-info member-button">회원가입</a></span>
 			</nav>
 		</div>
@@ -82,7 +82,7 @@
 				<!-- ========== Wrapper for slides======= -->
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="../../../images/bg/sortingBeans_re.jpg" alt="intro"
+						<img src="images/bg/sortingBeans_re.jpg" alt="intro"
 							class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h1>Cafe 4.0</h1>
@@ -93,7 +93,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="../../../images/bg/woodenBike_re.jpg" alt="woodenBike"
+						<img src="images/bg/woodenBike_re.jpg" alt="woodenBike"
 							class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h1>나무 자전거</h1>
@@ -104,7 +104,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="../../../images/bg/pickingCoffeCherries_re.jpg"
+						<img src="images/bg/pickingCoffeCherries_re.jpg"
 							alt="cherryPicking" class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h2>르완다</h2>
@@ -118,7 +118,7 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="../../../images/bg/coffeeParchments_re.jpg" alt="parchments"
+						<img src="images/bg/coffeeParchments_re.jpg" alt="parchments"
 							class="img-responsive intro" />
 						<div class="carousel-caption">
 							<h2>파치먼트 상태</h2>
