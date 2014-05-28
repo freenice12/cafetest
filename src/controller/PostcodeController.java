@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -27,22 +28,25 @@ public class PostcodeController {
 
 
 	@RequestMapping
-	public ModelAndView handleRequestInternal(String eupmyeondong){
+	public ModelAndView onSubmit(@RequestParam("eupmyeondong") String eupmyeondong) throws Exception{
 		
 		System.out.println("어허");
+		
+		
 		//입력한 '읍/면/동' 값으로 Postcode List 취득
-		List<Postcode> selectedPostcode = this.postcodeCatalog.getPostcodeByEupmyeondong(eupmyeondong);
+		List<Postcode> postcode = this.postcodeCatalog.getPostcodeByEupmyeondong(eupmyeondong);
 		
 		//모델 생성
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("postcode", selectedPostcode);
+		model.put("postcode", postcode);
 		
 		//반환값인 ModelAndView 인스턴스 생성
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addAllObjects(model);
-		
-		return modelAndView;
-	}
 
+		return modelAndView;
+		
+
+	}
 	
 }

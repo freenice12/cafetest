@@ -17,7 +17,8 @@ import org.springframework.stereotype.Repository;
 public class PostcodeDao {
 		private static final String POSTCODE_AND_DEFAULT_ADDRESS = "SELECT zipcode, sido, sigungu,"
 				+ " eupmyeondong, ri, beonji, bldg"
-				+ " from postcode where eupmyeondong like ':eupmyeodong%'";
+				+ " from postcode where eupmyeondong like ':eupmyeondong%'"
+				+ " ORDER BY zipcode, bldg asc";
 		
 		private SimpleJdbcTemplate template;
 		

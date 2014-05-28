@@ -126,3 +126,6 @@ create table member(
 
 select * from member;
 
+select * from POSTCODE
+where eupmyeondong like '소하1%'
+order by zipcode, bldg asc;
