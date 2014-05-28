@@ -7,10 +7,10 @@ import dao.Member_DAO;
 
 @Service
 public class MemberCatalogImpl implements MemberCatalog {
-	
+
 	@Autowired
 	private Member_DAO memberDao;
-	
+
 	public void setMemberDao(Member_DAO memberDao) {
 		this.memberDao = memberDao;
 	}
@@ -25,7 +25,7 @@ public class MemberCatalogImpl implements MemberCatalog {
 	@Override
 	public void entryMember(MemberVo member) {
 		this.memberDao.create(member);
-		
+
 	}
 
 

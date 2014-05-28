@@ -17,65 +17,89 @@ import org.springframework.web.servlet.ModelAndView;
 
 import utils.WebConstants;
 
+
 @Controller
 public class LoginController {
 
 	@Autowired
 	private Shop shopService;
-
+	
+	
 	@Autowired
 	private Validator loginValidator;
-
-	@RequestMapping(method=RequestMethod.GET)
-	public String toLoginView() {
-		return "login/login";
-	}
 
 	@ModelAttribute
 	public MemberVo setUpForm() { 
 		return new MemberVo();
 
 	}
-	
-	@RequestMapping("logout")
-	public String logout(HttpSession session){
-		session.setAttribute("USER_KEY", null);
-		return "redirect:../index/index.html";	//redirect는 경로를 지정해준다는 의미 
-	}
-	
 
-	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView onSubmit(MemberVo member,
+	@RequestMapping(method = RequestMethod.GET)
+	public String tologinView() {
+		return "login/login";
+
+		}
+	@RequestMapping(method = RequestMethod.POST)
+	public ModelAndView submit(MemberVo member,
 			BindingResult bindingResult, HttpSession session) {
 
 		this.loginValidator.validate(member, bindingResult);
 
 		ModelAndView modelAndView = new ModelAndView();
 		if (bindingResult.hasErrors()) {
+			
 			modelAndView.getModel().putAll(bindingResult.getModel());
 			return modelAndView;
 
 		}
 
 		try {
-			// ���������˻�
-			MemberVo loginMemberVo = this.shopService
-					.getMemberByUserEmailAndUserPasswd(
-							member.getUserEmail(), member.getUserPasswd());
+			//유저 정보 검색
+			MemberVo loginMemberVo = this.shopService.getMemberByUserEmailAndUserPasswd(member.getUserEmail(), member.getUserPasswd());
 			session.setAttribute(WebConstants.USER_KEY, loginMemberVo);
-			//���� Ȯ�� ��
-			modelAndView.addObject("loginMemberVo",loginMemberVo);
-			modelAndView.setViewName("index/index");
-			
+			//유저 확인시
+			modelAndView.setViewName("login/loginSuccess");
 			return modelAndView;
 		} catch (EmptyResultDataAccessException e) {
-			// ���� �� Ȯ�ν�
+			//유저 미 확인시
+
 			bindingResult.reject("error.login.memberVo");
 			modelAndView.getModel().putAll(bindingResult.getModel());
 			return modelAndView;
 		}
+		
 	}
+	
+	
+	@RequestMapping("login/logout")
+	public String logout(HttpSession session){
+		session.invalidate();
+		return "login/logout";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 
 }
-
-

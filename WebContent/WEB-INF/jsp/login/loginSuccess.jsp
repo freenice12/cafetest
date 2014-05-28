@@ -6,21 +6,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-<title>로그인 완료화면</title>
+<!-- Bootstrap CDN css -->
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
+
+<title></title>
 </head>
 <body>
-
-
+	<%@ include file="/WEB-INF/jsp/header.jsp"%>
 	<div align="center" class="body">
 		<h2>로그인 완료 화면</h2>
-		환영해요,${USER_KEY.userEmail }님! 환영합니다.&nbsp;&nbsp;&nbsp; 
+		환영해요,${USER_KEY.userEmail }님! 환영합니다.&nbsp;&nbsp;&nbsp;
 		<a href="../mypage">마이페이지</a>
 		<a href="../login/logout.html">로그아웃</a>
 <!-- 		<input type="submit" value="로그아웃"> -->
 	
 	</div>
 	
-	<%@ include file="/WEB-INF/jsp/header.jsp"%>
+
 	
 		<hr>
 \${USER_KEY.userEmail } = ${USER_KEY.userEmail }
