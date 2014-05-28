@@ -126,6 +126,8 @@ create table member(
 
 select * from member;
 
+insert into POSTCODE values('111111','Seoul','Geumcheongu','Gasan','','','world');
+
 select * from POSTCODE
 where eupmyeondong like '소하1%'
 order by zipcode, bldg asc;

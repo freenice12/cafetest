@@ -53,7 +53,7 @@ public class MemberEntryController {
 
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView onSubmit(MemberVo member, BindingResult bindingResult, HttpSession session) throws Exception{
-		
+		System.out.println("dd");
 		ModelAndView modelAndView = new ModelAndView();
 
 		if(bindingResult.hasErrors()){

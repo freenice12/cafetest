@@ -8,6 +8,9 @@
 <%@ include file="../../jsp/jsp_header.jsp"%>
 </head>
 <body>
+<form action="postcode.html" method="get">
+${postcode } 
+${eupmyeondong }
 	<table border="0">
 		<tr>
 			<td colspan="2">찾으려는 '읍/면/동' 주소를 입력하세요.</td>
@@ -21,7 +24,7 @@
 		</tr>
 		<c:forEach var="post" items="${postcode }">
 			<tr>
-				<td>${postcode.zipcode }</td>
+				<td>${post.zipcode }</td>
 				<td><a href="javascript:filladd('${post.zipcode }', '${post.sido }&nbsp; ${post.sigungu } &nbsp;
 					${post.eupmyeondong } &nbsp; ${post.ri } &nbsp;
 					${post.beonji } &nbsp; ${post.bldg }')"></a>${post.sido }&nbsp; ${post.sigungu } &nbsp;
@@ -30,6 +33,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+</form>
 </body>
 </html>
 

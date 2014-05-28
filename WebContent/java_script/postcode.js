@@ -1,7 +1,7 @@
 /*====우편번호 창열기=====*/
 function openwin(){
-	
-	window.open("../postcode/postcode.html", "", "width=400, height=250, resizable=no");
+//	window.open("../postcode/postcode.html", "", "width=400, height=250, resizable=no");
+	window.open("../postcode/postcode_test.html", "", "width=400, height=250, resizable=no");
 }
 
 /*=====우편번호 값 전달=====*/
